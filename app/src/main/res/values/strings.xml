@@ -17,5 +17,6 @@
     <string name="show_toast">Show Toast</string>
     <string name="rshort">short</string>
     <string name="rlong">long</string>
+    <string name="textview">TextView</string>
 
 </resources>
