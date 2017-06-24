@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Android User Communications</string>
+    <string name="launch_toast_activity">Launch Toast Activity</string>
+    <string name="launch_dialog_activity">Launch Dialog Activity</string>
+    <string name="launch_notification_activity">Launch Notification Activity</string>
+    <string name="launch_snackbar_activity">Launch Snackbar Activity</string>
+    <string name="close">Close</string>
+
+    <string name="toast_duration">Duration:</string>
+
+
+    <string name="position">Position:</string>
+    <string name="bottom">Bottom</string>
+    <string name="center">Center</string>
+
+    <string name="show_custom_toast">Show Custom Toast</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="rshort">short</string>
+    <string name="rlong">long</string>
+
+</resources>
