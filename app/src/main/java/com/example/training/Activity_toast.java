@@ -3,9 +3,12 @@ package com.example.training;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Activity_toast extends AppCompatActivity {
@@ -42,7 +45,7 @@ public class Activity_toast extends AppCompatActivity {
             public void onClick(View v) {
 
                 text = "This is regular toast";
-                showToast(toast);
+                showToast(toast, true);
             }
         });
 
@@ -51,8 +54,19 @@ public class Activity_toast extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 text = "This is custom toast";
-                showToast(customToast);
+                customToast = new Toast(getApplicationContext());
+                showToast(customToast, false);
+
+                LayoutInflater inflater = getLayoutInflater();
+                View layout = inflater.inflate(R.layout.custom_toast_layout, null);
+                customToast.setView(layout);
+                TextView textContent = (TextView) layout.findViewById(R.id.textContent);
+                textContent.setText(text);
+
+                customToast.show();
+
             }
         });
 
@@ -100,15 +114,19 @@ public class Activity_toast extends AppCompatActivity {
         }
     }
 
-    private void showToast(Toast toastName){
+    private void showToast(Toast toastName, boolean isToast){
 
         setDuration();
 
-        toastName = Toast.makeText(getApplicationContext(), text, duration);
+        if(isToast){
+            toastName = Toast.makeText(getApplicationContext(), text, duration);
+        }
 
         setPosition(toastName);
 
-        toastName.show();
+        if(isToast){
+            toastName.show();
+        }
     }
 
 }
