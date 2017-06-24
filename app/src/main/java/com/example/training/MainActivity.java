@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent newIntent = new Intent(MainActivity.this, SnackBar.class);
+                startActivity(newIntent);
             }
         });
 

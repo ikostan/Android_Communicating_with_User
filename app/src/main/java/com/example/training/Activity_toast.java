@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -54,7 +53,6 @@ public class Activity_toast extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 text = "This is custom toast";
                 customToast = new Toast(getApplicationContext());
                 showToast(customToast, false);
@@ -66,11 +64,10 @@ public class Activity_toast extends AppCompatActivity {
                 textContent.setText(text);
 
                 customToast.show();
-
             }
         });
-
     }
+
 
     private void setButtons(){
 
@@ -78,6 +75,7 @@ public class Activity_toast extends AppCompatActivity {
         btnShowToast = (Button) findViewById(R.id.btnShowToast);
         btnShowCustomToast = (Button) findViewById(R.id.btnShowCustomToast);
     }
+
 
     private void setDuration(){
 
@@ -113,6 +111,7 @@ public class Activity_toast extends AppCompatActivity {
             return;
         }
     }
+
 
     private void showToast(Toast toastName, boolean isToast){
 
