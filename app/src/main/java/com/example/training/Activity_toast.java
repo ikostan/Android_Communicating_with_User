@@ -16,7 +16,7 @@ public class Activity_toast extends AppCompatActivity {
     private int duration;
     private int duartion;
     private String text;
-    private Toast toast;
+    private Toast toast, customToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,38 +42,7 @@ public class Activity_toast extends AppCompatActivity {
             public void onClick(View v) {
 
                 text = "This is regular toast";
-
-                if(radioDuration.getCheckedRadioButtonId() == R.id.radioShort){
-
-                    duartion = Toast.LENGTH_SHORT;
-                    text += ": SHORT";
-                }
-                else if(radioDuration.getCheckedRadioButtonId() == R.id.radioLong){
-
-                    duartion = Toast.LENGTH_LONG;
-                    text += ": LONG";
-                }
-                else{
-                    Toast.makeText(Activity_toast.this, "Please select TOAST DURATION first", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                toast = Toast.makeText(getApplicationContext(), text, duration);
-
-                if(radioPosition.getCheckedRadioButtonId() == R.id.radioCenter){
-
-                    toast.setGravity(Gravity.CENTER, 0,0);
-                }
-                else if(radioPosition.getCheckedRadioButtonId() == R.id.radioBottom){
-
-                    toast.setGravity(Gravity.BOTTOM, 0,0);
-                }
-                else{
-                    Toast.makeText(Activity_toast.this, "Please select TOAST POSITION first", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                toast.show();
+                showToast(toast);
             }
         });
 
@@ -82,6 +51,8 @@ public class Activity_toast extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                text = "This is custom toast";
+                showToast(customToast);
             }
         });
 
@@ -92,6 +63,52 @@ public class Activity_toast extends AppCompatActivity {
         btnToastClose = (Button) findViewById(R.id.btnToastClose);
         btnShowToast = (Button) findViewById(R.id.btnShowToast);
         btnShowCustomToast = (Button) findViewById(R.id.btnShowCustomToast);
+    }
+
+    private void setDuration(){
+
+        if(radioDuration.getCheckedRadioButtonId() == R.id.radioShort){
+
+            duartion = Toast.LENGTH_SHORT;
+            text += ": SHORT";
+        }
+        else if(radioDuration.getCheckedRadioButtonId() == R.id.radioLong){
+
+            duartion = Toast.LENGTH_LONG;
+            text += ": LONG";
+        }
+        else{
+            Toast.makeText(Activity_toast.this, "Please select TOAST DURATION first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+    }
+
+
+    private void setPosition(Toast toastName){
+
+        if(radioPosition.getCheckedRadioButtonId() == R.id.radioCenter){
+
+            toastName.setGravity(Gravity.CENTER, 0,0);
+        }
+        else if(radioPosition.getCheckedRadioButtonId() == R.id.radioBottom){
+
+            toastName.setGravity(Gravity.BOTTOM, 0,0);
+        }
+        else{
+            Toast.makeText(Activity_toast.this, "Please select TOAST POSITION first", Toast.LENGTH_SHORT).show();
+            return;
+        }
+    }
+
+    private void showToast(Toast toastName){
+
+        setDuration();
+
+        toastName = Toast.makeText(getApplicationContext(), text, duration);
+
+        setPosition(toastName);
+
+        toastName.show();
     }
 
 }
