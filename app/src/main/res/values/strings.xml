@@ -17,8 +17,9 @@
     <string name="rshort">short</string>
     <string name="rlong">long</string>
     <string name="textview">TextView</string>
+    <string name="title_activity_snack_bar">SnackBar</string>
     <string name="show_regular_snackbar">Show Regular Snackbar</string>
     <string name="show_action_snackbar">Show Action Snackbar</string>
-    <string name="title_activity_snack_bar">SnackBar</string>
+    <string name="show_snackbar">Show SnackBar</string>
 
 </resources>
