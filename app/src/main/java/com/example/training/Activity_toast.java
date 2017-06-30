@@ -108,6 +108,7 @@ public class Activity_toast extends AppCompatActivity {
             toastName.setGravity(Gravity.BOTTOM, 0,0);
         }
         else{
+
             Toast.makeText(Activity_toast.this, "Please select TOAST POSITION first", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -116,15 +117,19 @@ public class Activity_toast extends AppCompatActivity {
     //Show toast message
     private void showToast(Toast toastName, boolean isToast){
 
+        //Set toast duration
         setDuration();
 
         if(isToast){
+            //Create the toast
             toastName = Toast.makeText(getApplicationContext(), text, duration);
         }
 
+        //Set toast position
         setPosition(toastName);
 
         if(isToast){
+            //Display the toast
             toastName.show();
         }
     }
