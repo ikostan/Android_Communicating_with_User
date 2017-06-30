@@ -21,5 +21,8 @@
     <string name="show_regular_snackbar">Show Regular Snackbar</string>
     <string name="show_action_snackbar">Show Action Snackbar</string>
     <string name="show_snackbar">Show SnackBar</string>
+    <string name="button">Button</string>
+    <string name="test">test</string>
+    <string name="action_snackbar">Action SnackBar</string>
 
 </resources>

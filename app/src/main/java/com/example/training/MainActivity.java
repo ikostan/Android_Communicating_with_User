@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button btnLaunchToast, btnLaunchSnackBar, btnLaunchDialog, btnNotification, btnClose;
@@ -59,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     private void setButtons(){
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btnLaunchDialog = (Button) findViewById(R.id.btnLaunchDialog);
         btnNotification = (Button) findViewById(R.id.btnNotification);
         btnClose = (Button) findViewById(R.id.btnClose);
+
     }
 
 }
