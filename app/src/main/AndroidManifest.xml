@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_toast" />
-        <activity
-            android:name=".SnackBar"
-            android:label="@string/title_activity_snack_bar"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
