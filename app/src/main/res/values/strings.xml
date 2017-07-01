@@ -24,5 +24,8 @@
     <string name="button">Button</string>
     <string name="test">test</string>
     <string name="action_snackbar">Action SnackBar</string>
+    <string name="custom_dialog">Custom Dialog</string>
+    <string name="simple_dialog">Simple Dialog</string>
+    <string name="single_action">Single Action</string>
 
 </resources>

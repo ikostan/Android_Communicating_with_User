@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btnLaunchDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent newIntent = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(newIntent);
             }
         });
 

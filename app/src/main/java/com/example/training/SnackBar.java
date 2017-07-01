@@ -1,5 +1,6 @@
 package com.example.training;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -96,6 +97,7 @@ public class SnackBar extends AppCompatActivity implements View.OnClickListener{
             }
         });
 
+        actionSnackBar.setActionTextColor(Color.YELLOW);
         actionSnackBar.show();
         Log.d("showActionSnackBar: ", "Finished");
     }
